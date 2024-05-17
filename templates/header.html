@@ -18,7 +18,7 @@
             </ul>
             <!-- Search and login container -->
             <div class="search-container">
-                <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0" action="{% url 'pages:home' %}">
                     <input type="text" id="searchInput" placeholder="Search..." aria-label="Search" name="q"
                            value="{{request.GET.q}}">
                     <button id="searchBtn" type="submit">Search</button>
