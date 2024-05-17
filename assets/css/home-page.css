@@ -1,0 +1,105 @@
+/* Add this to your home-page.css file */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+/* Breaking News section styles */
+#breaking-news {
+    background-color: #f8f9fa;
+}
+
+.news-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.news-ticker span {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Headline section styles */
+#headline {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.headline-news {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.headline-item {
+    flex: 0 0 31%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.headline-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.headline-item h3 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.headline-item p {
+    font-size: 16px;
+    padding: 0 10px 10px;
+}
+
+/* Latest News section styles */
+#latest-news {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.latest-news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-item h3 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.news-item p {
+    font-size: 16px;
+    padding: 0 10px 10px;
+}
+
+

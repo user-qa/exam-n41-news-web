@@ -1,0 +1,41 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-info,
+.social-links {
+    flex: 0 0 48%;
+}
+
+.contact-info h3,
+.social-links h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.social-links a:last-child img {
+    margin-right: 0;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}

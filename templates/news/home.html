@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="{% static 'css/home-page.css' %}">
+</head>
+<body>
+
+{%include 'header.html'%}
+
+<section id="breaking-news">
+    <div class="container">
+        <h2>Breaking News</h2>
+        <div class="news-ticker">
+            <marquee behavior="scroll" direction="left" scrollamount="6">
+                {% for b_news in breaking_news %}
+                <span>{{b_news.headline}}</span>
+                {% endfor %}
+            </marquee>
+        </div>
+    </div>
+</section>
+
+<!--<section id="headline">-->
+<!--    <div class="container">-->
+<!--        <h2>Top Headlines</h2>-->
+<!--        <div class="headline-news">-->
+<!--            {% for news in newss %}-->
+<!--            <div class="headline-item">-->
+<!--                <img src="headline1.jpg" alt="Headline Image">-->
+<!--                <h3>{{news.headline}}</h3>-->
+<!--                <p>{{news.content|truncatechars:20}}</p>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<section id="latest-news">
+    <div class="container">
+        <h2>Latest News</h2>
+        <div class="latest-news">
+            {% for news in newss %}
+            <div class="news-item">
+
+                <img src="{{news.photo.url}}" alt="News Image">
+                <a style="color:black" href="{% url 'news:details' pk=news.id %}">
+                    <h3>{{news.headline|truncatechars:50}}</h3></a>
+                    <p>{{news.content|truncatechars:50}}</p>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Search and login container */
+.search-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Search input styles */
+#searchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Search button styles */
+
+#loginBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#loginBtn:hover {
+    background-color: #0056b3;
+}
+#logoutBtn {
+    background-color: #f20202;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#logoutBtn:hover {
+    background-color: #b52626;
+}
+
+#profileBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#profileBtn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+postBtn
+#postBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#postBtn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+#searchBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+#searchBtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+#loginBtn {
+    border-radius: 0 5px 5px 0;
+}
+
+

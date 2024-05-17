@@ -1,0 +1,94 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/news-details.css' %}">
+    <title>News Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+
+<div class="news-container">
+    <h1>{{news.headline}}</h1>
+    <p><strong>Posted by:</strong> <a href="{% url 'users:details' pk=news.posted_by.id %}">
+        {{news.posted_by.username}}</a></p>
+    <p><strong>Category:</strong> {{news.category.category}}</p>
+    <p><strong>Posted on:</strong> {{news.created_at}}</p>
+
+    <div class="news-photo">
+        <img src="{{news.photo.url}}" alt="News Photo">
+    </div>
+
+    <div class="news-content">
+        {{news.content}}
+    </div>
+
+    <!-- Comments Section -->
+    <div class="comments-section">
+        <h2>Comments</h2>
+
+
+        <div class="existing-comments">
+            {% for comment in comments %}
+            {% if comment.written_by == request.user %}
+            <div class="mycomment">
+                <p>
+                    <a
+                            href="{% url 'users:details' pk=comment.written_by.id %}">
+                        <strong>{{ comment.written_by }}</strong>
+                    </a>
+
+                    {{comment.created_at}}
+                    <a href="{% url 'news:delete_comment' pk=comment.id %}"> <i class="fa-solid fa-trash"></i></a>
+                </p>
+                <p>{{comment.message}}</p>
+
+            </div>
+
+            {% else %}
+            <div class="comment">
+                <p>
+                    <a
+                            href="{% url 'users:details' pk=comment.written_by.id %}">
+                        <strong>{{ comment.written_by }}</strong>
+                    </a>
+
+                    {{comment.created_at}}</p>
+                <p>{{comment.message}}</p>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+
+        </div>
+
+
+        <div class="add-comment">
+            <h3>Leave a Comment</h3>
+            <form method="post" action="{% url 'news:comment' %}">
+                <div class="form-group">
+                    <input type="hidden" name="news_id" value="{{ news.id }}">
+                    <label for="comment-text">Comment</label>
+                    <textarea id="comment-text" name="comment" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="styled-button">Submit</button>
+                <a href="{% url 'pages:home' %}">
+                    <button class="back-button" type="button">Go Back</button>
+                </a>
+                {% if request.user == news.posted_by %}
+                <a href="{% url 'news:delete_news' pk=news.id %}">
+                    <button class="delete-button" type="button">Delete</button>
+                </a>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

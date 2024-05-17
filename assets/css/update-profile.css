@@ -1,0 +1,45 @@
+
+    .container {
+      width: 50%;
+      margin: 0 auto;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    legend {
+      font-size: 1.5em; /* Larger font size */
+      font-weight: bold; /* Bold text */
+      color: #333; /* Text color */
+      border-bottom: 2px solid #333; /* Bottom border */
+      padding-bottom: 10px; /* Add some space below the title */
+      margin-bottom: 20px; /* Add some space below the title */
+      text-align: center;
+    }
+
+.alert {
+    padding: 15px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}

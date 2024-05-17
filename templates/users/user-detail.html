@@ -1,0 +1,50 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="{% static 'css/user-details.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <h2>User Details</h2>
+        <div class="profile-photo">
+            <img src="{{ user.photo.url }}" alt="Profile Photo">
+        </div>
+        <div class="details">
+            <div class="detail-item">
+                <label for="username">Username:</label>
+                <span id="username">{{ user.username }}</span>
+            </div>
+            <div class="detail-item">
+                <label for="first_name">First Name:</label>
+                <span id="first_name">{{ user.first_name }}</span>
+            </div>
+            <div class="detail-item">
+                <label for="last_name">Last Name:</label>
+                <span id="last_name">{{ user.last_name }}</span>
+            </div>
+
+            <div class="detail-item">
+                <label for="email">Email:</label>
+                <span id="email">{{ user.email }}</span>
+            </div>
+            <div class="detail-item">
+                <label for="phone_number">Phone Number:</label>
+                <span id="phone_number">{{ user.phone_number }}</span>
+            </div>
+            <div class="detail-item">
+                <label for="date_of_birth">Date of Birth:</label>
+                <span id="date_of_birth">{{ user.date_of_birth }}</span>
+            </div>
+        </div>
+        <a href="{% url 'pages:home' %}"><button class="back-button" type="button" >Go Back</button></a>
+        {% if request.user == user %}
+        <a href="{% url 'users:update' pk=user.id %}"><button class="back-button" type="button" >Update</button></a>
+        {% endif %}
+    </div>
+</body>
+</html>

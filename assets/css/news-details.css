@@ -1,0 +1,135 @@
+/* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* News container styles */
+.news-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.news-container p {
+    font-size: 1em;
+    color: #555;
+}
+
+.news-container .news-photo img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.news-container .news-content {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Comments section styles */
+.comments-section {
+    margin-top: 40px;
+}
+
+.comments-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Comment styles */
+.comment, .mycomment {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comment p, .mycomment p {
+    margin: 0 0 10px 0;
+}
+
+.comment a, .mycomment a {
+    color: black;
+    text-decoration: none;
+}
+
+.mycomment {
+    background-color: #42f5aa; /* Customized background color */
+}
+
+
+
+.add-comment h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.add-comment textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+/* Styled button styles */
+.styled-button, .back-button, .delete-button{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.styled-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #45a049;
+}
+
+
+.back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #870309;
+}
